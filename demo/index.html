@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Filesize plugin</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <link href="bootstrap.min.css" rel="stylesheet">
+		<script src="../dist/jquery.filesize.min.js"></script>
+	</head>
+	<body>
+        <div class="container">
+            <h1>jQuery Filesize plugin</h1>
+            <h3>Usage</h3>
+            <p>To use the filesize API simply init the filesize function on the selector of choice.  For example:</p>
+            <code>
+                $("#element").filesize()
+            </code>
+            <p>if you prefer to apply to a broader selector:</p>
+            <code>
+                $(".fs").filesize()
+            </code>
+            <h3>Examples</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Before</th>
+                        <th>After!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1999</td>
+                        <td>
+                            <div class="fs">1999</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10020003100000</td>
+                        <td>
+                            <div class="fs">10020003100000</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5000000</td>
+                        <td>
+                            <div class="fs">500000</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6000000000</td>
+                        <td>
+                            <div class="fs">6000000000</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h5>Initializing directly an an element</h5>
+            <div id="element">100200031</div>
+        </div>
+		<script>
+			$(function() {
+                $("#element").filesize({abbr:false});
+				$(".fs").filesize();
+			});
+		</script>
+	</body>
+</html>

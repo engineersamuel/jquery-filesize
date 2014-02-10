@@ -1,0 +1,26 @@
+{
+	"name": "jquery-filesize",
+	"title": "jQuery Filesize Plugin",
+	"description": "A jQuery plugin for converting bytes to a human readable format",
+	"keywords": [
+		"jquery",
+		"filesize",
+		"plugins"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "Samuel Mendenhall",
+		"email": "Samuel.Mendenhall@gmail.com",
+		"url": "https://github.com/engineersamuel"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/engineersamuel/jquery-filesize/issues",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
