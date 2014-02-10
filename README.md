@@ -10,5 +10,15 @@ $("#element").filesize()
 $(".fs").filesize()
 ~~~
 
-See the *demo/index.html* for a working example.
+#### Examples
 
+* 1999 becomes 1.95 kB
+* 5000000 becomes 488.28 kB
+* 6000000000 becomes 5.59 GB
+
+See *demo/index.html* for more examples.
+
+# Contributing
+* fork the repo
+* npm install
+* grunt (which tests and packages)
