@@ -15,8 +15,8 @@ $(".fs").filesize()
 #### To use the function outside of the context of a selector
 
 ~~~
-> $.fn.filesize._humanize(20000)
-> "1000 bytes"
+> $.fn.filesize._humanize(2000)
+> "1.95 kilobytes"
 ~~~
 
 #### Examples
