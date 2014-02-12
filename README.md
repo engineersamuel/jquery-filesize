@@ -12,6 +12,13 @@ $("#element").filesize()
 $(".fs").filesize()
 ~~~
 
+#### To use the function outside of the context of a selector
+
+~~~
+> $.fn.filesize._humanize(20000)
+> "1000 bytes"
+~~~
+
 #### Examples
 
 * 1999 becomes 1.95 kB
