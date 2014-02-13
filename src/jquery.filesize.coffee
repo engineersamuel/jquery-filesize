@@ -43,14 +43,14 @@
 
     # Helper function that contains the actual logic, this allows the function to be called independently
     _humanize: (size, opts) ->
+      abbr = if opts?.abbr? then opts.abbr else true
       i = Math.floor(Math.log(size) / Math.log(1024))
       if (size is 0) or (parseInt(size) is 0)
         return "0 kB"
       else if isNaN(i) or (not isFinite(size)) or (size is Number.POSITIVE_INFINITY) or (size is Number.NEGATIVE_INFINITY) or (not size?) or (size < 0)
-        console.info "Throwing error"
         throw Error("#{size} did not compute to a valid number to be humanized.")
       else
-        if opts?.abbr is true
+        if abbr is true
           return (size / Math.pow(1024, i)).toFixed(2) * 1 + " " + [
             "B"
             "kB"

@@ -27,6 +27,10 @@ describe "File size direct function testing", ->
       $.fn.filesize._humanize(-2)
     ).should.throw "-2 did not compute to a valid number to be humanized."
 
+  it "should show abbreviated units", ->
+    initElement(2000)
+    $.fn.filesize._humanize(2000).should.equal '1.95 kB'
+
 describe "Test filesize plugin with invalid inputs", ->
 
   it "should show nothing", ->

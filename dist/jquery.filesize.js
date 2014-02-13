@@ -40,7 +40,8 @@
         }
       },
       _humanize: function(size, opts) {
-        var i;
+        var abbr, i;
+        abbr = opts != null ? opts.abbr : void 0;
         i = Math.floor(Math.log(size) / Math.log(1024));
         if ((size === 0) || (parseInt(size) === 0)) {
           return "0 kB";
@@ -48,7 +49,7 @@
           console.info("Throwing error");
           throw Error("" + size + " did not compute to a valid number to be humanized.");
         } else {
-          if ((opts != null ? opts.abbr : void 0) === true) {
+          if (abbr === true) {
             return (size / Math.pow(1024, i)).toFixed(2) * 1 + " " + ["B", "kB", "MB", "GB", "TB", "PB"][i];
           } else {
             return (size / Math.pow(1024, i)).toFixed(2) * 1 + " " + ["bytes", "kilobytes", "megabytes", "gigabytes", "terabytes", "petabytes"][i];
